@@ -56,7 +56,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
         shouldApplyGlass
-          ? "glass backdrop-blur-md bg-[var(--brand-navy)]/80 shadow-lg"
+          ? "glass glass-bottom-border backdrop-blur-md bg-[var(--brand-navy)]/80 shadow-lg"
           : "bg-transparent backdrop-blur-none"
       }`}
       style={{
