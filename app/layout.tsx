@@ -22,8 +22,9 @@ export const metadata: Metadata = {
     "Ciberseguridad",
   ],
   icons: {
-    icon: "/images/logo-isaca.png",
-    apple: "/images/logo-isaca.png",
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 }
 
