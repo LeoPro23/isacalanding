@@ -67,7 +67,7 @@ export function StudentGroupSection() {
         {/* Benefits */}
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4 text-center">
-            ¿Por qué ser parte de UNT ISG?
+            ¿Por qué ser parte de UNT Isaca Student Group?
           </h3>
           <p className="text-muted-foreground text-center mb-8 sm:mb-12 text-base sm:text-lg px-4">
             Descubre los beneficios de unirte a nuestro grupo estudiantil
