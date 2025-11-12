@@ -35,9 +35,9 @@ export function TopicsSection() {
             return (
               <div
                 key={topic.id}
-                className="bg-card rounded-xl p-5 sm:p-6 border border-border hover:shadow-lg hover:-translate-y-2 transition-all group"
+                className="bg-card rounded-xl p-5 sm:p-6 border border-border hover:shadow-lg hover:-translate-y-2 transition-all group flex flex-col items-center text-center"
               >
-                <div className="p-2.5 sm:p-3 rounded-lg bg-gradient-to-br from-[var(--brand-blue)] to-[var(--brand-cyan)] w-fit mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                <div className="p-2.5 sm:p-3 rounded-lg bg-gradient-to-br from-[var(--brand-blue)] to-[var(--brand-cyan)] w-fit mb-3 sm:mb-4 group-hover:scale-110 transition-transform mx-auto">
                   <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3 leading-tight">

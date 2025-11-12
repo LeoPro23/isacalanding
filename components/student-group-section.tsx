@@ -76,10 +76,10 @@ export function StudentGroupSection() {
             {benefitsData.benefits.map((benefit, index) => (
               <div
                 key={benefit.id}
-                className="glass rounded-xl p-5 sm:p-6 hover:scale-105 transition-transform"
+                className="glass rounded-xl p-5 sm:p-6 hover:scale-105 transition-transform flex flex-col items-center text-center"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-[var(--brand-cyan)] mb-3 sm:mb-4" />
+                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-[var(--brand-cyan)] mb-3 sm:mb-4 mx-auto" />
                 <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">{benefit.title}</h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </div>
