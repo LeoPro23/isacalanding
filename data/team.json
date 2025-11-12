@@ -1,0 +1,109 @@
+{
+  "academicAdvocate": {
+    "name": "Alberto Carlos Mendoza De los Santos",
+    "role": "ACADEMIC ADVOCATE",
+    "image": "/images/members/default-avatar.svg"
+  },
+  "directivaGeneral": [
+    {
+      "name": "Díaz Sifuentes Sergio",
+      "role": "Presidente",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Robles Romero Ronaldo Carlos",
+      "role": "Vicepresidente",
+      "cycle": "V",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Venturo Ramos Alexander Josue",
+      "role": "Director Operativo",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Solorzano Sanchez Yoel Armando",
+      "role": "Coordinador Ejecutivo",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Guevara Valencia Ingrid Maricel",
+      "role": "Coordinador Ejecutivo",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    }
+  ],
+  "relacionesSociales": [
+    {
+      "name": "Leonard Mayanga",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "I",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Ariana Vargas",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "I",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Valentina Rivas",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "V",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Luis Zavaleta Mego",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Gian Franco Samana",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Alex Gil",
+      "role": "Comité de Relaciones Sociales",
+      "cycle": "VIII",
+      "image": "/images/members/default-avatar.svg"
+    }
+  ],
+  "marketing": [
+    {
+      "name": "Leonardo Guimaray",
+      "role": "Comité de Marketing",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Miguel Cabanillas",
+      "role": "Comité de Marketing",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Ashley Córdova",
+      "role": "Comité de Marketing",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Anghela Herrera",
+      "role": "Comité de Marketing",
+      "cycle": "V",
+      "image": "/images/members/default-avatar.svg"
+    },
+    {
+      "name": "Ivan Fernandez",
+      "role": "Comité de Marketing",
+      "cycle": "VII",
+      "image": "/images/members/default-avatar.svg"
+    }
+  ]
+}

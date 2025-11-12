@@ -1,0 +1,65 @@
+{
+  "title": "XI UNT ISACA FULL DAY",
+  "subtitle": "Precios y Detalles",
+  "date": "2025-11-29T23:59:59",
+  "plans": [
+    {
+      "id": "estudiante-basico",
+      "type": "Estudiante",
+      "category": "BÁSICO",
+      "price": 30,
+      "promoPrice": 20,
+      "color": "#D97757",
+      "features": ["Ponencias Magistrales"]
+    },
+    {
+      "id": "estudiante-completo",
+      "type": "Estudiante",
+      "category": "COMPLETO",
+      "price": 40,
+      "promoPrice": 30,
+      "color": "#B94654",
+      "features": ["Ponencias Magistrales", "Material de Apoyo", "Certificado"]
+    },
+    {
+      "id": "profesional-basico",
+      "type": "Profesional",
+      "category": "BÁSICO",
+      "price": 50,
+      "promoPrice": null,
+      "color": "#6B6B8A",
+      "features": ["Ponencias Magistrales"]
+    },
+    {
+      "id": "profesional-completo",
+      "type": "Profesional",
+      "category": "COMPLETO",
+      "price": 60,
+      "promoPrice": null,
+      "color": "#1A6B7A",
+      "features": ["Ponencias Magistrales", "Material de Apoyo", "Certificado"]
+    }
+  ],
+  "paymentMethods": [
+    {
+      "name": "Yape / Plin",
+      "contact": "SERGIO HELI DIAZ SIFUENTES",
+      "number": "968 350 969",
+      "icon": "phone"
+    },
+    {
+      "name": "BCP",
+      "contact": "SERGIO HELI DIAZ SIFUENTES",
+      "account": "57077216825046",
+      "cci": "00257017721682504605",
+      "icon": "bank"
+    },
+    {
+      "name": "Banco",
+      "contact": "SERGIO HELI DIAZ SIFUENTES",
+      "account": "8983358914367",
+      "cci": "003888013358914367745",
+      "icon": "bank"
+    }
+  ]
+}
