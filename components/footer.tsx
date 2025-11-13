@@ -45,6 +45,8 @@ export function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
                   aria-label={item.name}
                 >
