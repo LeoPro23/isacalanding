@@ -25,21 +25,19 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 
-      const sections = document.querySelectorAll("section")
+      const sections = document.querySelectorAll("section, footer")
       const headerHeight = 80 // Height of header
+      const lightSections = ["equipo", "temario", "beneficios", "student-group", "nosotros", "contacto"]
 
-      sections.forEach((section) => {
+      for (const section of sections) {
         const rect = section.getBoundingClientRect()
-        // Check if section is under the header (within first 80px of viewport)
         if (rect.top <= headerHeight && rect.bottom >= 0) {
-          const bgColor = window.getComputedStyle(section).backgroundColor
-          // Check if background is light (white or light colors)
-          // Light sections: equipo, temario, beneficios, student-group, nosotros, contacto (they have white/light backgrounds)
+          const isFooter = section.tagName.toLowerCase() === "footer"
           const sectionId = section.id
-          const lightSections = ["equipo", "temario", "beneficios", "student-group", "nosotros", "contacto"]
-          setIsOverLightSection(lightSections.includes(sectionId))
+          setIsOverLightSection(!isFooter && lightSections.includes(sectionId))
+          break
         }
-      })
+      }
     }
 
     handleScroll() // Initial check
