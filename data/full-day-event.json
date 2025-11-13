@@ -43,20 +43,20 @@
   "paymentMethods": [
     {
       "name": "Yape / Plin",
-      "contact": "",
+      "contact": "SERGIO HELÍ DIAZ SIFUENTES",
       "number": "968 350 969",
       "icon": "phone"
     },
     {
       "name": "BCP",
-      "contact": "",
+      "contact": "SERGIO HELÍ DIAZ SIFUENTES",
       "account": "57077216825046",
       "cci": "00257017721682504605",
       "icon": "bank"
     },
     {
       "name": "Banco",
-      "contact": "",
+      "contact": "SERGIO HELÍ DIAZ SIFUENTES",
       "account": "8983358914367",
       "cci": "003888013358914367745",
       "icon": "bank"
