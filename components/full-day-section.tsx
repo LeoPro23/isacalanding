@@ -1,7 +1,18 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Check, Phone, Building2 } from "lucide-react"
+import Image from "next/image"
+import {
+  Check,
+  Phone,
+  Building2,
+  CalendarDays,
+  Clock8,
+  MapPin,
+  ArrowUpRight,
+  Linkedin,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
 import eventData from "@/data/full-day-event.json"
 
 interface TimeLeft {
@@ -48,6 +59,12 @@ export function FullDaySection() {
     { label: "Segundos", value: timeLeft.seconds },
   ]
 
+  const eventDetails = [
+    { label: "Fecha", value: eventData.details?.date, icon: CalendarDays },
+    { label: "Hora", value: eventData.details?.time, icon: Clock8 },
+    { label: "Lugar", value: eventData.details?.location, icon: MapPin },
+  ].filter((detail) => detail.value)
+
   return (
     <section id="full-day" className="py-16 md:py-24 bg-[var(--brand-navy)] relative overflow-hidden">
       {/* Grid Pattern Background */}
@@ -67,8 +84,88 @@ export function FullDaySection() {
           </p>
         </div>
 
-        {/* Countdown */}
+        {/* Overview */}
         <div className="mb-12 md:mb-16 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] items-stretch">
+            <div className="space-y-6">
+              {eventData.description?.map((paragraph, index) => (
+                <p key={index} className="text-white/80 text-base sm:text-lg leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+
+              {eventData.highlights && eventData.highlights.length > 0 && (
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {eventData.highlights.map((highlight, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-[var(--brand-green)] mt-1 flex-shrink-0" />
+                      <p className="text-white/70 text-sm sm:text-base leading-relaxed">{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {eventData.registration?.link && (
+                <div className="pt-4 flex justify-center">
+                  <a
+                    href={eventData.registration.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-blue)] to-[var(--brand-cyan)] px-8 py-3 text-base sm:text-lg font-semibold text-white shadow-lg shadow-[var(--brand-cyan)]/20 transition-transform duration-300 hover:translate-y-[-2px] hover:shadow-xl"
+                  >
+                    ¡Inscríbete Ahora!
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {eventDetails.length > 0 && (
+              <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/10 p-6 sm:p-8 backdrop-blur-xl shadow-[0_25px_70px_rgba(10,15,55,0.35)] self-stretch flex flex-col">
+                <div className="absolute inset-0 opacity-70">
+                  <span className="absolute -top-24 right-0 h-48 w-48 rounded-full bg-[var(--brand-cyan)]/25 blur-3xl" />
+                  <span className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-[var(--brand-blue)]/25 blur-2xl" />
+                </div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex flex-col items-center text-center pb-6">
+                    <h3 className="text-white text-xl font-semibold mt-4">Datos del evento</h3>
+                    <div className="mt-3 h-px w-20 bg-gradient-to-r from-transparent via-[var(--brand-cyan)]/60 to-transparent" />
+                  </div>
+
+                  <div className="relative flex-1 mt-6">
+                    <div className="space-y-6">
+                      {eventDetails.map((detail, index) => {
+                        const Icon = detail.icon
+                        const isLast = index === eventDetails.length - 1
+
+                        return (
+                          <div key={detail.label}>
+                            <div className="flex items-start gap-4">
+                              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--brand-cyan)]/30 bg-[var(--brand-cyan)]/12 text-[var(--brand-cyan)] shadow-[0_10px_35px_rgba(20,180,255,0.25)]">
+                                <Icon className="h-5 w-5 shrink-0" />
+                              </div>
+                              <div className="flex flex-col">
+                                <p className="text-white/50 text-xs uppercase tracking-[0.35em]">{detail.label}</p>
+                                <p className="text-white text-lg font-semibold leading-tight">{detail.value}</p>
+                              </div>
+                            </div>
+                            {!isLast && (
+                              <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-[var(--brand-cyan)]/60 to-transparent" />
+                            )}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Countdown */}
+        <div className="mb-12 md:mb-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
             {timeUnits.map((unit, index) => (
               <div
@@ -87,8 +184,52 @@ export function FullDaySection() {
           </div>
         </div>
 
+        {/* Speakers */}
+        {eventData.speakers && eventData.speakers.length > 0 && (
+          <div className="mb-12 md:mb-16 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Ponentes confirmados</h3>
+              <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto">
+                Conoce a los especialistas que compartirán experiencias sobre auditoría, gobierno de TI, seguridad y
+                transformación digital.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 max-w-6xl mx-auto">
+              {eventData.speakers.map((speaker) => (
+                <div
+                  key={speaker.name}
+                  className="glass rounded-2xl p-6 backdrop-blur-md text-center flex flex-col items-center h-full"
+                >
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 mb-4">
+                    <div className="absolute inset-0 rounded-full bg-[var(--brand-cyan)]/20 blur-xl" />
+                    <Image
+                      src={speaker.image || "/placeholder.svg"}
+                      alt={speaker.name}
+                      fill
+                      className="rounded-full object-cover border-2 border-[var(--brand-cyan)]/30"
+                    />
+                  </div>
+                  <h4 className="text-white font-semibold text-base sm:text-lg mb-1">{speaker.name}</h4>
+                  <p className="text-white/60 text-sm uppercase tracking-wide mb-3">{speaker.role}</p>
+                  {speaker.linkedin && (
+                    <a
+                      href={speaker.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-[var(--brand-cyan)] hover:text-white transition-colors"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      Ver perfil
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Pricing Plans */}
-        <div className="mb-12 md:mb-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+        <div className="mb-12 md:mb-16 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {eventData.plans.map((plan, index) => (
               <div
@@ -152,7 +293,7 @@ export function FullDaySection() {
         </div>
 
         {/* Payment Methods */}
-        <div className="animate-fade-in-up" style={{ animationDelay: "700ms" }}>
+        <div className="animate-fade-in-up" style={{ animationDelay: "600ms" }}>
           <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">Métodos de Pago</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {eventData.paymentMethods.map((method, index) => (
