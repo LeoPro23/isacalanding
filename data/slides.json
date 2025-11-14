@@ -8,7 +8,7 @@
       "image": "/images/slide/slide-group-1.jpeg",
       "cta": {
         "text": "Únete a Nosotros",
-        "link": "#contacto"
+        "link": "#nosotros"
       }
     },
     {
@@ -19,7 +19,7 @@
       "image": "/images/slide/slide-group-2.jpeg",
       "cta": {
         "text": "Conoce Más",
-        "link": "#nosotros"
+        "link": "#student-group"
       }
     }
   ]

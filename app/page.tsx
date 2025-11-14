@@ -5,7 +5,6 @@ import { AboutSection } from "@/components/about-section"
 import { StudentGroupSection } from "@/components/student-group-section"
 import { TopicsSection } from "@/components/topics-section"
 import { TeamSection } from "@/components/team-section"
-import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <StudentGroupSection />
       <TopicsSection />
       <TeamSection />
-      <ContactSection />
+        {/* <ContactSection /> */}
       <Footer />
     </main>
   )

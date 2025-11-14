@@ -49,7 +49,7 @@ export function FullDaySection() {
   ]
 
   return (
-    <section id="proximo-evento" className="py-16 md:py-24 bg-[var(--brand-navy)] relative overflow-hidden">
+    <section id="full-day" className="py-16 md:py-24 bg-[var(--brand-navy)] relative overflow-hidden">
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
 

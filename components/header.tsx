@@ -12,7 +12,6 @@ const navigation = [
   { name: "Student Group", href: "#student-group" },
   { name: "Temario", href: "#temario" },
   { name: "Equipo", href: "#equipo" },
-  { name: "Contacto", href: "#contacto" },
 ]
 
 export function Header() {
@@ -90,7 +89,7 @@ export function Header() {
               </a>
             ))}
             <Button asChild className="bg-[var(--cta)] hover:bg-[var(--cta-hover)] text-white">
-              <a href="#contacto">Únete</a>
+              <a href="#full-day">Únete</a>
             </Button>
           </div>
 
@@ -121,7 +120,7 @@ export function Header() {
                 </a>
               ))}
               <Button asChild className="bg-[var(--cta)] hover:bg-[var(--cta-hover)] text-white mt-2">
-                <a href="#contacto" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#full-day" onClick={() => setMobileMenuOpen(false)}>
                   Únete
                 </a>
               </Button>

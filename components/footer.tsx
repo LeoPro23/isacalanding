@@ -8,7 +8,6 @@ const navigation = {
     { name: "Student Group", href: "#student-group" },
     { name: "Temario", href: "#temario" },
     { name: "Equipo", href: "#equipo" },
-    { name: "Contacto", href: "#contacto" },
   ],
   resources: [
     { name: "COBIT5 (Español)", href: "https://www.isaca.org/resources/cobit" },
